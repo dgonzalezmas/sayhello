@@ -7,6 +7,12 @@
 
 package com.awan.jaxws;
 
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+@WebService
+@SOAPBinding(style = Style.RPC)
 public interface HelloWorld extends java.rmi.Remote {
     public java.lang.String getHelloWorldAsString(java.lang.String arg0) throws java.rmi.RemoteException;
 }
